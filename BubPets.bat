@@ -10,13 +10,6 @@ set /p holder=
 if %holder% == F goto saved
 if not %holder% == F goto chonamu
 
-:saved
-set "uname="
-for /F "skip=0 delims=" %%i in (savefile.txt) do if not defined uname set "uname=%%i"
-set "pname="
-for /F "skip=1 delims=" %%i in (savefile.txt) do if not defined pname set "pname=%%i"
-goto namconf
-
 :chonamu
 cls
 echo Please type in a nick name for your pet to call you.
@@ -45,3 +38,10 @@ cls
 echo WORK IN PROGRESS! PRESS ENTER!
 set /p holder=
 exit
+
+:saved
+set "uname="
+for /F "skip=1 delims=" %%i in (savefile.txt) do if not defined uname set "uname=%%i"
+set "pname="
+for /F "skip=2 delims=" %%i in (savefile.txt) do if not defined pname set "pname=%%i"
+goto namconf
