@@ -4,8 +4,16 @@ cls
 echo Welcome to Bub Pets Version 1.1!
 echo (:) -Hi
 echo Please press enter to begin
+echo Please type F and then press enter for a save file
 set /p holder=
-goto chonamu
+
+if %holder% == F goto saved
+if not %holder% == F goto chonamu
+
+:saved
+set "uname="
+for /F "skip=4 delims=" %%i in (xprtest.txt) do if not defined uname set "uname=%%i"
+goto namconf
 
 :chonamu
 cls
