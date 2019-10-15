@@ -40,6 +40,6 @@ if not %yn% == n goto namconf
 
 :mm
 cls
-echo WORK IN PROGRESS! PRESS ENTER
+echo WORK IN PROGRESS! PRESS ENTER!
 set /p holder=
 exit
