@@ -12,7 +12,7 @@ if not %holder% == F goto chonamu
 
 :saved
 set "uname="
-for /F "skip=0 delims=" %%i in (xprtest.txt) do if not defined uname set "uname=%%i"
+for /F "skip=0 delims=" %%i in (savefile.txt) do if not defined uname set "uname=%%i"
 goto namconf
 
 :chonamu
