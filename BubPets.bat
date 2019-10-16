@@ -50,14 +50,14 @@ goto namconf
 :save
 setlocal enabledelayedexpansion
 set count=0
-for /f %%i in (input.txt) do (
+for /f %%i in (savefile.txt) do (
    call set /a count=%%count%%+1
    if !count!==1 (set line=%%i testusername) else (set line=%%i)
    echo !line!>>savefile.txt
   )
   setlocal enabledelayedexpansion
 set count=0
-for /f %%i in (input.txt) do (
+for /f %%i in (savefile.txt) do (
    call set /a count=%%count%%+1
    if !count!==2 (set line=%%i testpetname) else (set line=%%i)
    echo !line!>>savefile.txt
