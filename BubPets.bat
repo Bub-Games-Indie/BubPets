@@ -3,11 +3,13 @@
 cls
 echo Welcome to Bub Pets Version 1.1!
 echo (:) -Hi
-echo Please press enter to begin
+echo Please press enter to begin a new save
 echo Please type F and then press enter for a save file
+echo Press E for the experimental save a new file feature.
 set /p holder=
 
-if %holder% == F goto saved
+if %holder% == F goto loadsave
+if %holder% == E goto save
 
 :chonamu
 cls
@@ -60,3 +62,4 @@ for /f %%i in (input.txt) do (
    if !count!==2 (set line=%%i testpetname) else (set line=%%i)
    echo !line!>>savefile.txt
   )
+  goto splash
