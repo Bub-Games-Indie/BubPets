@@ -8,7 +8,6 @@ echo Please type F and then press enter for a save file
 set /p holder=
 
 if %holder% == F goto saved
-if not %holder% == F goto chonamu
 
 :chonamu
 cls
