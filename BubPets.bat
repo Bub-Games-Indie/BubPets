@@ -36,8 +36,33 @@ if not %yn% == n goto namconf
 
 :mm
 cls
-echo WORK IN PROGRESS! PRESS ENTER!
+echo (:) -Hello %uname%. What do you want to do?
+echo (1) Feed
+echo (2) Play
+echo (3) Story
+set /p mmcho=
+
+if %mmcho% == 1 goto feed
+if %mmcho% == 2 goto play
+if %mmcho% == 3 goto read
+
+:read
+set /a num=%random% %% 1
+if %num% equ 0 (goto sto1) else (goto sto2)
+
+:sto1
+exit
+
+:sto2
+exit
+
+:feed
+cls
+echo (:) nom nom nom
 set /p holder=
+goto mm
+
+:play
 exit
 
 :loadsave
