@@ -20,7 +20,7 @@ goto chonamp
 :chonamp
 cls
 echo Please pick a name for your Bub.
-set /p pname
+set /p pname=
 goto namconf
 
 :namconf
