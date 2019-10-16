@@ -38,9 +38,25 @@ echo WORK IN PROGRESS! PRESS ENTER!
 set /p holder=
 exit
 
-:saved
+:loadsave
 set "uname="
 for /F "skip=1 delims=" %%i in (savefile.txt) do if not defined uname set "uname=%%i"
 set "pname="
 for /F "skip=2 delims=" %%i in (savefile.txt) do if not defined pname set "pname=%%i"
 goto namconf
+
+:save
+setlocal enabledelayedexpansion
+set count=0
+for /f %%i in (input.txt) do (
+   call set /a count=%%count%%+1
+   if !count!==1 (set line=%%i testusername) else (set line=%%i)
+   echo !line!>>savefile.txt
+  )
+  setlocal enabledelayedexpansion
+set count=0
+for /f %%i in (input.txt) do (
+   call set /a count=%%count%%+1
+   if !count!==2 (set line=%%i testpetname) else (set line=%%i)
+   echo !line!>>savefile.txt
+  )
