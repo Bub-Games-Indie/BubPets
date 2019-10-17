@@ -2,7 +2,7 @@
 :splash
 cls
 echo Welcome to Bub Pets Version 1.5!
-echo (:) -Hi
+echo ☺-Hi
 echo Please press enter to begin a new save
 echo Please type F and then press enter for a save file
 echo Press E for the experimental save a new file feature.
@@ -25,7 +25,7 @@ goto namconf
 
 :namconf
 cls
-echo (:) -Hey %uname%! You have named me %pname%. Is this correct?
+echo ☺-Hey %uname%! You have named me %pname%. Is this correct?
 echo Chose either (Y/N)
 set /p yn=
 
@@ -36,7 +36,7 @@ if not %yn% == n goto namconf
 
 :mm
 cls
-echo (:) -Hello %uname%. What do you want to do?
+echo ☺-Hello %uname%. What do you want to do?
 echo (1) Feed
 echo (2) Play
 echo (3) Story
@@ -51,7 +51,7 @@ set /a num=%random% %% 1
 if %num% equ 0 (goto sto1) else (goto sto2)
 
 :sto1
-echo (:) -Once upon a time...
+echo ☺-Once upon a time...
 echo There were two little turtles. One of the turtles said to the other,
 echo "Why do we have shells?"
 echo To that, the other turtle told the first turtle
@@ -66,7 +66,7 @@ set /p holder=
 goto mm
 
 :sto2
-echo (:) -Once upon a time...
+echo ☺-Once upon a time...
 echo There was a dude who ate farts for breakfast. He died one day for fart related internal bleeding
 echo The docter said to the guy's mother one thing.
 echo "WEED EATER"
@@ -76,7 +76,7 @@ goto mm
 
 :feed
 cls
-echo (:O) ><((((`>
+echo ☺><((((`>
 echo nom nom nom
 set /p holder=
 goto mm
