@@ -82,6 +82,13 @@ set /p holder=
 goto mm
 
 :play
+cls
+echo ☺-Welcome to the gambling game!
+echo Press enter to begin.
+set /p holder=
+goto play1
+
+:play1
 exit
 
 :loadsave
