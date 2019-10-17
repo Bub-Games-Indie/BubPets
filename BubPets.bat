@@ -1,7 +1,7 @@
 @echo off
 :splash
 cls
-echo Welcome to Bub Pets Version NT1.8!
+echo Welcome to Bub Pets Version NT2.0!
 echo ☺-Hi
 echo Please press enter to begin a new save
 echo Please type F and then press enter for a save file
@@ -76,7 +76,7 @@ goto mm
 
 :feed
 cls
-echo ☺><((((`>
+echo ☺food
 echo nom nom nom
 set /p holder=
 goto mm
@@ -89,7 +89,10 @@ set /p holder=
 goto play1
 
 :play1
-exit
+set /a num=%random% %% 5
+if %num% equ 0 (echo Winner!) else (echo Loser.)
+set /p holder=
+goto mm
 
 :loadsave
 set "uname="
