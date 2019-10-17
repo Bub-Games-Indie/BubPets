@@ -1,7 +1,7 @@
 @echo off
 :splash
 cls
-echo Welcome to Bub Pets Version 1.5!
+echo Welcome to Bub Pets Version NT1.8!
 echo ☺-Hi
 echo Please press enter to begin a new save
 echo Please type F and then press enter for a save file
